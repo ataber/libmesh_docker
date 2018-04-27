@@ -6,12 +6,12 @@ RUN apt-get update --fix-missing \
     git \
     m4 \
     pkg-config \
+    libeigen3-dev \
 &&  apt-get clean \
 &&  rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
-RUN git clone https://github.com/eigenteam/eigen-git-mirror.git eigen
-
-RUN git clone https://github.com/libMesh/libmesh.git && \
+RUN /tmp && \
+    git clone https://github.com/libMesh/libmesh.git && \
     cd libmesh && \
     mkdir build && \
     cd build && \
@@ -24,5 +24,6 @@ RUN git clone https://github.com/libMesh/libmesh.git && \
                  --with-metis=PETSc \
                  --with-cxx=$CXX && \
     make && \
-    make install
+    make install && \
+    cd /tmp && rm -rf libmesh
 ENV LIBMESH_DIR /opt/libmesh
