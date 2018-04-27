@@ -10,7 +10,7 @@ RUN apt-get update --fix-missing \
 &&  apt-get clean \
 &&  rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
-RUN /tmp && \
+RUN cd /tmp && \
     git clone https://github.com/libMesh/libmesh.git && \
     cd libmesh && \
     mkdir build && \
