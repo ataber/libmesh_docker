@@ -8,9 +8,9 @@ RUN apt-get update --fix-missing \
 &&  apt-get clean \
 &&  rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
-RUN git clone git@github.com:eigenteam/eigen-git-mirror.git eigen
+RUN git clone https://github.com/eigenteam/eigen-git-mirror.git eigen
 
-RUN git clone git@github.com:libMesh/libmesh.git && \
+RUN git clone https://github.com/libMesh/libmesh.git && \
     cd libmesh && \
     mkdir build && \
     cd build && \
