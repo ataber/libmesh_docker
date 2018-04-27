@@ -25,4 +25,4 @@ RUN git clone https://github.com/libMesh/libmesh.git && \
                  --with-cxx=$CXX && \
     make && \
     make install
-ENV LIBMESH_DIR libmesh
+ENV LIBMESH_DIR /opt/libmesh
