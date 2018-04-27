@@ -5,6 +5,7 @@ RUN apt-get update --fix-missing \
 &&  apt-get install -y --force-yes \
     git \
     m4 \
+    pkg-config \
 &&  apt-get clean \
 &&  rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
