@@ -22,10 +22,12 @@ RUN cd /tmp && \
                  --disable-boost \
                  --disable-metaphysicl \
                  --enable-petsc-required \
+                 --with-vtk-include=/usr/include/vtk-6.2/ \
+                 --with-vtk-lib=/usr/lib/x86_64-linux-gnu/ \
                  --with-eigen-include=eigen \
                  --with-metis=PETSc \
                  --with-cxx=$CXX && \
-    make && \
+    make -j $(cat /proc/cpuinfo | grep processor | wc -l) && \
     make install && \
     cd /tmp && rm -rf libmesh
 ENV LIBMESH_DIR /opt/libmesh
