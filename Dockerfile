@@ -7,6 +7,7 @@ RUN apt-get update --fix-missing \
     m4 \
     pkg-config \
     libvtk6-dev \
+    libproj-dev \
     libeigen3-dev \
 &&  apt-get clean \
 &&  rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
