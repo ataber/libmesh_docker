@@ -6,7 +6,6 @@ RUN apt-get update --fix-missing \
     git \
     m4 \
     pkg-config \
-    libvtk7-dev \
     libproj-dev \
     libeigen3-dev \
 &&  apt-get clean \
