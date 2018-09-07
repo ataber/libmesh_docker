@@ -1,4 +1,4 @@
-FROM ataber/vtk
+FROM ataber/slepc
 
 RUN apt-get update --fix-missing \
 &&  apt-get upgrade -y --force-yes \
@@ -6,6 +6,7 @@ RUN apt-get update --fix-missing \
     git \
     m4 \
     pkg-config \
+    libvtk7-dev \
     libproj-dev \
     libeigen3-dev \
 &&  apt-get clean \
@@ -21,8 +22,8 @@ RUN cd /tmp && \
                  --disable-boost \
                  --disable-metaphysicl \
                  --enable-petsc-required \
-                 --with-vtk-include=$VTK_INCLUDE_DIR \
-                 --with-vtk-lib=$VTK_LIBRARY_DIR \
+                 --with-vtk-include=/usr/include/vtk-7.1/ \
+                 --with-vtk-lib=/usr/lib/x86_64-linux-gnu/ \
                  --with-eigen-include=eigen \
                  --with-metis=PETSc \
                  --with-cxx=$CXX && \
