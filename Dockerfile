@@ -26,7 +26,7 @@ RUN cd /tmp && \
                  --with-vtk-lib=$VTK_DIR/lib \
                  --with-eigen-include=eigen \
                  --with-metis=PETSc \
-                 --with-cxx=$CXX && \
+                 --with-cxx=mpicxx && \
     make -j $(cat /proc/cpuinfo | grep processor | wc -l) && \
     make install && \
     cd /tmp && rm -rf libmesh
