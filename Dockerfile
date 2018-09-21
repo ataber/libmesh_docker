@@ -19,7 +19,9 @@ RUN cd /tmp && \
                  --prefix=/opt/libmesh \
                  --disable-boost \
                  --disable-metaphysicl \
-                 --enable-petsc-required \
+                 --enable-petsc \
+                 --enable-slepc \
+                 --enable-vtk \
                  --with-vtk-include=$VTK_DIR/include/vtk-8.1 \
                  --with-vtk-lib=$VTK_DIR/lib \
                  --with-eigen-include=eigen \
