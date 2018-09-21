@@ -20,8 +20,8 @@ RUN cd /tmp && \
                  --disable-boost \
                  --disable-metaphysicl \
                  --enable-petsc-required \
-                 --with-vtk-include=/usr/include/vtk-7.1/ \
-                 --with-vtk-lib=/usr/lib/x86_64-linux-gnu/ \
+                 --with-vtk-include=$VTK_DIR/include/vtk-8.1 \
+                 --with-vtk-lib=$VTK_DIR/lib \
                  --with-eigen-include=eigen \
                  --with-metis=PETSc \
                  --with-cxx=$CXX && \
