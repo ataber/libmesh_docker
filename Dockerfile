@@ -1,4 +1,4 @@
-FROM ataber/vtk
+FROM ataber/slepc
 
 RUN apt-get update --fix-missing \
 &&  apt-get install -y --force-yes \
