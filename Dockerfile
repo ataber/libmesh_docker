@@ -6,7 +6,6 @@ RUN apt-get update --fix-missing \
     m4 \
     pkg-config \
     libproj-dev \
-    libeigen3-dev \
 &&  apt-get clean \
 &&  rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
