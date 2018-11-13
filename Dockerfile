@@ -24,7 +24,7 @@ RUN cd /tmp && \
                  --enable-vtk \
                  --with-vtk-include=$VTK_DIR/include/vtk-8.1 \
                  --with-vtk-lib=$VTK_DIR/lib \
-                 --with-eigen-include=eigen \
+                 --disable-eigen \
                  --with-cxx=mpicxx \
                  --with-metis=PETSc && \
     make -j $(cat /proc/cpuinfo | grep processor | wc -l) && \
